@@ -75,7 +75,7 @@
 
 ### 杂志极简
 
-非对称编辑排版、雪山工作空间与留白，适合内容感较强的品牌。 设计标识：`editorial`；兼容 ID：`editorial`。
+衬线大标题、象牙白留白与细线分隔，配合开场动画、逐字浮现、幕布式图片展开、横向滚动精选、悬停跟随光标等动效，适合追求高级感的品牌。系统开启“减少动态效果”时自动显示静态版本。 设计标识：`editorial`；兼容 ID：`editorial`。
 
 ![杂志极简桌面样例](docs/editorial.png)
 
@@ -226,6 +226,7 @@ const disposeLaptop = bindLaptop(main);
 
 ## 部署与常见问题
 
+- **只发布杂志极简一套（锁定风格）**：执行 `npm run build:site`，会生成 `dist/fujisawa-editorial/`。把这个文件夹里的全部内容作为网站根目录上传即可（含 Cloudflare 可识别的 `_headers`）。换成其他风格：`node scripts/build-site.mjs <设计标识> dist/<目录名>`。
 - **把演示发布到网上**：将 `index.html`、`demo.css`、`demo.js`、`favicon.svg` 和完整 `src/` 目录上传到静态托管服务，保持目录结构。这里无需运行 Node.js 服务。单文件 `preview.html` 也可独立静态托管。
 - **想开始真实销售**：还需接入自己的商品、账户、订单与支付系统。发布此 UI 并不会自动获得这些功能。
 - **双击 `index.html` 后页面空白**：开发版使用 ES Modules，需要通过 `npm start` 打开。双击预览请使用 `preview.html`。
